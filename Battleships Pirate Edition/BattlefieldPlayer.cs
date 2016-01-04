@@ -16,7 +16,7 @@ using DoubleBufferedUserControls;
 
 namespace Battleships
 {
-    public class BattlefieldPlayer : Panel_DoubleBuffered
+    public class BattlefieldPlayer : Form_DoubleBuffered
     {
         delegate void addControlCallback(Control contr, int x, int y);
         delegate void setTextCallback(string text);
@@ -93,7 +93,7 @@ namespace Battleships
             {
                 for (int j = 0; j < pb.GetLength(1); j++)
                 {
-                    Panel_DoubleBuffered p = new Panel_DoubleBuffered();
+                    var p = new Panel();
                     p.Location = new Point(i * 30, j * 30);
                     p.Tag = 0;
                     p.Margin = new Padding(0);
@@ -109,7 +109,7 @@ namespace Battleships
                     pb[i, j] = p;
                     this.Controls.Add(p);
 
-                    pb_Store[i, j] = new Panel_DoubleBuffered();
+                    pb_Store[i, j] = new Panel();
                 }
             }
         }

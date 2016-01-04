@@ -12,12 +12,12 @@ using System.Linq;
 using System.Text;
 using System.Windows.Forms;
 using System.Drawing;
-using DoubleBufferedUserControls;
 using System.Runtime.InteropServices;
+using DoubleBufferedUserControls;
 
 namespace Battleships
 {
-    public class BattlefieldOpponent : Panel_DoubleBuffered
+    public class BattlefieldOpponent : Form_DoubleBuffered
     {
         public struct IconInfo
         {
@@ -35,7 +35,7 @@ namespace Battleships
         [return: MarshalAs(UnmanagedType.Bool)]
         public static extern bool GetIconInfo(IntPtr hIcon, ref IconInfo pIconInfo);
 
-        public Panel_DoubleBuffered[,] pb = new Panel_DoubleBuffered[10, 10];
+        public Form[,] pb = new Form[10, 10];
 
         private delegate void addControlCallback(Control contr);
         delegate void showDestroyedShipsCallback(int[] args, bool horizontal);
@@ -71,7 +71,7 @@ namespace Battleships
             {
                 for (int j = 0; j < pb.GetLength(1); j++)
                 {
-                    Panel_DoubleBuffered p = new Panel_DoubleBuffered();
+                    var p = new Form();
                     p.Location = new Point(i * 30, j * 30);
                     p.Tag = 0;
                     p.Margin = new Padding(0);

@@ -17,8 +17,8 @@ using System.Windows.Forms;
 using System.Net;
 using System.Net.Sockets;
 using System.Threading;
-using DoubleBufferedUserControls;
 using System.IO;
+using DoubleBufferedUserControls;
 
 namespace Battleships
 {

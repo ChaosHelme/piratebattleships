@@ -45,7 +45,7 @@ namespace Battleships
         /// </summary>
         public static Label lblStatus;
 
-        public static DoubleBufferedUserControls.Panel_DoubleBuffered panelStatus;
+        public static Panel panelStatus;
 
         // MenuItems
         public static ToolStripMenuItem lanMenuItem;
@@ -130,7 +130,7 @@ namespace Battleships
                 spielHostenMenuItem.Click += new EventHandler(spielHostenToolStripMenuItem_Click);
                 infoMenuItem.Click += new EventHandler(infoMenuItem_Click);
 
-                panelStatus = new Panel_DoubleBuffered();
+                panelStatus = new Panel();
                 panelStatus.Location = new Point(597, 47);
                 panelStatus.Size = new System.Drawing.Size(197, 100);
                 panelStatus.AutoScroll = true;

@@ -37,7 +37,7 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="DoubleBufferedUserControls">
-      <HintPath>..\..\..\..\..\Downloads\Battleships\Battleships\DoubleBufferedUserControls.dll</HintPath>
+      <HintPath>..\Assemblies\DoubleBufferedUserControls.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -51,10 +51,10 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="BattlefieldOpponent.cs">
-      <SubType>Component</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BattlefieldPlayer.cs">
-      <SubType>Component</SubType>
+      <SubType>Form</SubType>
     </Compile>
     <Compile Include="BattleshipsForm.cs">
       <SubType>Form</SubType>
@@ -68,6 +68,9 @@
     <Compile Include="ClientGameForm.designer.cs">
       <DependentUpon>ClientGameForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="GameObjects\Battleship.cs" />
+    <Compile Include="GameObjects\Cruiser.cs" />
+    <Compile Include="GameObjects\Galley.cs" />
     <Compile Include="HostGameForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -82,6 +85,7 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="GameObjects\Ship.cs" />
     <Compile Include="Ships.cs" />
     <Compile Include="SocketPacket.cs" />
     <Compile Include="SoundClass.cs" />
